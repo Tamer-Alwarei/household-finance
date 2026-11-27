@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Household Finance Manager</title>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <!-- Top bar: always visible. Burger button only shows below the lg breakpoint. -->
+  <header class="navbar navbar-dark bg-dark sticky-top flex-nowrap p-0 shadow">
+    <button class="navbar-toggler d-lg-none border-0 ms-2" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar" aria-label="Open menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand px-3 me-0" href="#/dashboard"><i class="bi bi-wallet2 me-2"></i>Household Finance</a>
+    <span class="navbar-text text-secondary small ms-auto pe-3 d-none d-md-inline" id="last-saved"></span>
+  </header>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar: offcanvas drawer on mobile, fixed column from lg up. -->
+      <nav id="sidebar" class="offcanvas-lg offcanvas-start col-lg-2 sidebar bg-body-tertiary" tabindex="-1">
+        <div class="offcanvas-header d-lg-none">
+          <h5 class="offcanvas-title">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebar" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+          <ul class="nav flex-column w-100 pt-lg-3" id="nav-list"></ul>
+        </div>
+      </nav>
+
+      <main id="app" class="col-12 col-lg-10 ms-auto px-3 px-md-4 py-3" tabindex="-1"></main>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toasts"></div>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/chartjs/chart.umd.js"></script>
+  <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+:root {
+  --hf-positive: #198754;
+  --hf-negative: #dc3545;
+  --hf-warning: #fd7e14;
+}
+
+/* Sidebar sticks beside the content from the lg breakpoint (>=992px). */
+@media (min-width: 992px) {
+  .sidebar {
+    position: sticky;
+    top: 56px;
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+    border-right: 1px solid var(--bs-border-color);
+  }
+}
+
+#nav-list .nav-link {
+  color: var(--bs-body-color);
+  padding: .6rem 1rem;
+}
+#nav-list .nav-link.active {
+  font-weight: 600;
+  background: var(--bs-primary-bg-subtle);
+  border-left: 4px solid var(--bs-primary);
+}
+
+.text-positive { color: var(--hf-positive); }
+.text-negative { color: var(--hf-negative); }
+.text-warning-hf { color: var(--hf-warning); }
+
+.stat-value { font-size: 1.35rem; font-weight: 600; }
+/* Larger numbers once there is room for them. */
+@media (min-width: 768px) { .stat-value { font-size: 1.6rem; } }
+
+.progress { height: .6rem; }
